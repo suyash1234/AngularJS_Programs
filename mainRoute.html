@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+
+</head>
+
+<body ng-app="myApp">
+    <p>Reference pages are:</p>
+
+    <a href="#validation">validation</a>
+    <a href="#filter">filter</a>
+    <a href="#first">first</a>
+    <div ng-view></div>
+    <script>
+        var app = angular.module("myApp", ['ngRoute']);
+        app.config(['$routeProvider', function($routeProvider) {
+            $routeProvider.
+            when("/validation", {
+                    templateUrl: "/home/bridgeit/Documents/suyash/angularjs/practice.html/validation.html"
+                })
+                .when('/filter', {
+                    templateUrl: '/home/bridgeit/Documents/suyash/angularjs/practice.html/filter.html'
+                })
+                .when('/first', {
+                    templateUrl: '/home/bridgeit/Documents/suyash/angularjs/practice.html/first.html',
+                }).
+            otherwise({
+                redirectTo: '/'
+            });
+        }]);
+    </script>
+</body>
+
+</html>
