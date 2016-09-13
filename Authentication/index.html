@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="/home/bridgeit/Documents/suyash/angularjs/node_modules/angular/angular.js"></script>
+    <script src="/home/bridgeit/Documents/suyash/angularjs/node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script> -->
+    <script src="/home/bridgeit/Documents/suyash/angularjs/node_modules/firebase/firebase.js"></script>
+    <script src="/home/bridgeit/Documents/suyash/angularjs/node_modules/angularfire/dist/angularfire.js"></script>
+    <script src="/home/bridgeit/Documents/suyash/angularjs/node_modules/angular-cookies/angular-cookies.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script> -->
+  <title>Document</title>
+</head>
+<script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyCpNwP5GqIa3mqOxCT2WvzzKNNK3MT3S74",
+        authDomain: "login-392cc.firebaseapp.com",
+        databaseURL: "https://login-392cc.firebaseio.com",
+        storageBucket: "login-392cc.appspot.com",
+    };
+    firebase.initializeApp(config);
+</script>
+
+<body ng-app="myApp">
+    <ui-view></ui-view>
+</body>
+<script src="app.js"></script>
+<script src="controller/loginCtrl.js"></script>
+<script src="controller/homeCtrl.js"></script>
+<script src="controller/registerCtrl.js"></script> 
+</html>

@@ -1,0 +1,17 @@
+<div ng-controller="loginCtrl">
+    <center>
+        <form >
+            <h1> LOGIN FORM</h1> Username: <input type="text" id="username" ng-model="data.username" ></input><br/>
+          <br/>
+            Password: <input type="password" id="password" ng-model="data.password" ></input><br/>
+            <br/>
+          <span ng-show="error" >{{error}}</span>
+
+            <button value="login" ng-click="submit(data)">Login</button>
+             <div ng-controller="registerCtrl">
+            <button value="Register" ng-click="rgtr($parent.data)">Register</button>
+          </div> 
+        </form>
+
+    </center>
+</div>

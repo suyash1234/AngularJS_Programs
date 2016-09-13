@@ -1,0 +1,25 @@
+{
+  "name": "firebasedemo",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/suyash1234/AngularJS_Programs.git"
+  },
+  "author": "",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/suyash1234/AngularJS_Programs/issues"
+  },
+  "dependencies": {
+    "firebase": "~3.3.2",
+    "angular-cookies": "~1.5.8",
+    "angularfire": "~2.0.2",
+    "angular": "~1.5.8",
+    "angular-ui-router": "~1.0.0-beta.2"
+  }
+}
