@@ -1,3 +1,4 @@
+
 angular.module("myApp").controller("registerCtrl", register);
 
 function register($scope, $firebaseObject, $location, $state) {
