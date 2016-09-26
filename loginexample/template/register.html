@@ -1,12 +1,16 @@
- <div ng-controller="registerCtrl">
+<div ng-controller="registerCtrl">
     <center>
+        <!-- make a registration form -->
         <form>
             <h1> REGISTRATION FORM</h1> Email_id: <input type="text" id="username" ng-model="email"></input><br/>
             <br/> Password: <input type="password" id="password" ng-model="password"></input><br/>
             <br/>
+            <!-- make a button which on clicks call the regigter function -->
             <button value="register" ng-click="register()">Click to register</button><br/>
         </form>
-    </center>
+    </center><br/>
+    <!-- use center tag to align it in center -->
     <center>
+        <!-- make a reference to login page -->
         <a href="#/login">Click here <span>for Login</span></a>
     </center>

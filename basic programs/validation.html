@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html>
+  <body>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <form ng-app="" name="myForm">
+      <input type="email" name="emailName" ng-model="text">
+        <scan ng-show="myForm.emailName.$error.email">not a valid email</scan>
+
+  </body>
+</html>

@@ -1,3 +1,4 @@
+
 angular.module("myApp").controller("loginCtrl", login);
 
 function login($scope, $firebaseObject, $location, $state, $cookies) {

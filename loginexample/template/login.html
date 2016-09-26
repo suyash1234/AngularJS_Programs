@@ -1,15 +1,48 @@
-<!-- <div ng-controller="loginCtrl"> -->
-    <center>
-        <form>
-            <h1> LOGIN FORM</h1> Email_id: <input type="text" id="username" ng-model="email"/><br/>
-            <br/> Password: <input type="password" id="password" ng-model="password"/><br/>
-            <br/>
-            <span ng-show="error" >{{error}}</span></br>
-            <button value="login" ng-click="login()">Login</button><br/>
-        </form>
-    </center>
-<!-- </div> -->
-</br>
-<center>
-    <a href="#/register">Click here <span>for registration</span></a>
-</center>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- source files of bootstrap and jquery -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <!-- create a container in which we have to put our form -->
+    <div class="container">
+        <!-- create a one row in which we have to put our form -->
+        <div class="row">
+            <!-- create a column having large screen size and set its offset to center -->
+            <div class="col-lg-4 col-lg-offset-4">
+                <!-- put the heading  -->
+                <h2>Login Form</h2><br/>
+                <!-- create a form having fields Email and paasword-->
+                <form style="width:300px">
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter email" ng-model="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="pwd">Password:</label>
+                        <input type="password" class="form-control" id="pwd" placeholder="Enter password" ng-model="password">
+                    </div>
+                    <div class="checkbox">
+                        <label><input type="checkbox"> Remember me</label>
+                    </div>
+                    <span ng-show="error">{{error}}</span></br>
+                    <button type="submit" class="btn btn-default" ng-click="login()">Submit</button>
+                </form><br/>
+                <!-- closing of form -->
+                <!-- provide a link to register -->
+                <a href="#/register">Click here <span>for registration</span></a>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
