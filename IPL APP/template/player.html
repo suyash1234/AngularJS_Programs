@@ -1,42 +1,18 @@
-<nav class="navbar navbar-default" style="background-color:rgba(0, 0, 0, 0.5)">
+<!-- use nav bar to display items and move back tp the home page -->
+<nav class="navbar navbar-default" style="background-color:#00BFFF">
     <div class="container-fluid">
         <ul class="nav navbar-nav">
             <li> <a ui-sref="home">Home</a></li>
-            <li><a ui-sref="">TeamDetails</a></li>
+            <li><a ui-sref="home">TeamDetails</a></li>
         </ul>
     </div>
 </nav>
+<!-- closing of nav bar -->
+<!-- use div in which data display in the following grid format -->
 <div class="w3-container">
-    <div ng-repeat="x in data" class="col-md-4">
-
-        <div class="w3-card-4" style="width:auto;margin:10px">
-            <header class="w3-container w3-blue">
-                <center>
-                    <h2>{{x.player_name}}</h2></center>
-            </header>
-
-            <div class="w3-container" ng-controller="imgCtrl" align="center">
-                <img src="" id="{{x.player_img_url}}" name="{{getUrl(x.player_img_url)}} " width="250" height="320"></img>
-            </div>
-            </br>
-
-            <footer class="w3-container w3-blue">
-
-                <table align="center">
-                    <tr>
-                        <td>
-                          <h5>{{x.player_role}}</h5>
-                            <!-- <li><b>Name</b> : {{x.player_name}}</li>
-                            <li><b>Role</b> : {{x.player_role}}</li> -->
-                            <!-- <li><b>Batting Style</b> : {{x.player_batting_style}}</li> -->
-                            <!-- <li><b>Bowling Style</b> : {{x.player_bowling_style}}</li> -->
-                            <!-- <li><b>Date of Birth</b> : {{x.player_dob}}</li>
-                            <li><b>Nationality</b> : {{x.player_nationality}}</li> -->
-                        </td>
-                    </tr>
-                </table>
-
-            </footer>
-        </div>
+    <div ng-repeat="x in data" class="col-md-4 col-sm-6 col-xs-12">
+        <!-- this card-image directive stores all the data -->
+        <card-image data="x" index="$index"></card-image>
     </div>
 </div>
+<!-- closing of div -->

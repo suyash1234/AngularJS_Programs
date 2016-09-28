@@ -1,8 +1,14 @@
+/**
+ * FileName:home.js
+ * CreatedBy: Suyash
+ * Date :22-09-2016
+ * Purpose :controller to get images from firebase in carousel 3d view
+ */
 // bind the controller with the module and inject the services
 angular.module('myApp').controller('homeCtrl', function($firebase, $firebaseObject, $scope, $log) {
     //create one object and put src and caption in it
     $scope.slides = [{
-        'src': 'image.png',
+        'src': 'images/image.png',
         'caption': 'loading'
     }];
     //define the options in which all the properties of slides are there
@@ -20,17 +26,11 @@ angular.module('myApp').controller('homeCtrl', function($firebase, $firebaseObje
         autoRotationSpeed: 30000,
         loop: true
     };
-    // $scope.selectedClick = selectedClick;
-    //
-    // function selectedClick(index) {
-    //     $log.log('Selected Slide Clicked callback triggered. \n == Slide index is: ' + index + ' ==');
-    // }
     //make a function named getDatabase
     getDatabase = function() {
             //connect to the firebase and take team-info as reference
             var fbref = firebase.database().ref("team_info");
-            // var fbObject = $firebaseObject(fbref);
-            // fbObject.$loaded().then(function(obj) {
+
             //use on function to emit an event and passing obj which gives all the details of team-info
             fbref.on("value", function(obj) {
                 //first make an empty array
@@ -45,7 +45,6 @@ angular.module('myApp').controller('homeCtrl', function($firebase, $firebaseObje
                             'caption': caption,
                             'url': caption.replace(/\s+/g, '')
                         });
-                        //         console.log("Arc"+imageArray.length);
                     });
                 }
             });
@@ -61,11 +60,6 @@ angular.module('myApp').controller('homeCtrl', function($firebase, $firebaseObje
         }
         //call the getdatabase function
     getDatabase();
-    // MyService.getDatabase(function(imageArray){
-    //   $scope.slides = [];
-    //   console.log("lenght:"+imageArray.length);
-    // $scope.slides.push(imageArray);
-    // });
 
 
 });
